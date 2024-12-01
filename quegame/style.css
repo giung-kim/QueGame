@@ -1,0 +1,150 @@
+/* 배경 설정 */
+body {
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 로고 컨테이너 스타일 */
+.logo-container {
+    position: absolute;
+    top: 50px; /* 상단에서 10px 떨어짐 */
+    left: 3.5vw; /* 왼쪽 정렬 */
+    z-index: 10; /* 다른 요소보다 위에 표시 */
+}
+
+/* 로고 이미지 스타일 */
+.logo {
+    width: 200px; /* 로고의 가로 크기 */
+    height: auto; /* 세로 크기를 비율에 맞게 자동 조정 */
+}
+
+/* 상단 고정 제목 이미지 */
+.title {
+    position: fixed;  /* 페이지 상단에 고정 */
+    top: 0;  /* 화면 상단에 정확히 붙도록 설정 */
+    left: 50%;  /* 수평 중앙 정렬 */
+    transform: translateX(-50%);  /* 정확히 중앙 정렬 */
+    width: 15vw; /* 뷰포트 너비의 20%로 설정 */
+    height: auto;  /* 이미지 비율 유지 */
+    z-index: 10;
+}
+
+/* 캐릭터와 파츠를 담을 컨테이너 */
+.character-container {
+    position: relative;  /* relative로 설정해주면, 내부 절대 위치 요소들이 이 기준으로 위치를 잡음 */
+}
+
+/* 캐릭터 이미지 설정 */
+.character {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    top: 0vw;
+    width: 48vw;
+    height: auto;
+    position: relative;
+    z-index: 1; /* 캐릭터가 다른 파츠들보다 뒤에 보이게 설정 */
+}
+
+/* 카테고리 메뉴 설정 (왼쪽으로 배치, 위아래로 배열) */
+.category-menu {
+    display: flex;
+    flex-direction: column; /* 위아래로 정렬 */
+    justify-content: flex-start; /* 왼쪽에서부터 정렬 */
+    gap: 20px;
+    position: fixed;
+    z-index: 50;
+    top: 15vw; /* 원하는 위치로 설정 */
+    left: 3vw; /* 왼쪽 정렬 */
+}
+
+/* 카테고리 버튼 스타일 */
+.category-button {
+    width: 10vw;
+    height: auto;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.category-button:hover {
+    transform: scale(1.1);
+}
+
+/* 파츠 아이템 나열 (오른쪽 정렬, 위아래로 배열) */
+#parts-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; /* 위아래로 정렬 */
+    justify-content: center; /* 왼쪽에서부터 정렬 */
+    align-items: center; /* 가로 중앙 정렬 */
+    gap: 10px;
+    margin-top: 0vw; /* 카테고리 버튼과의 여유 공간 설정 */
+    position: fixed;
+    top: 12vw; /* 카테고리 메뉴 오른쪽에 표시될 위치 */
+    left: 15vw; /* 카테고리 버튼 오른쪽에 위치 */
+}
+
+/* 파츠 이미지 스타일 */
+.part-item {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+}
+
+.part-item:hover {
+    transform: scale(1.1);
+}
+
+
+/* 선택된 파츠 이미지 */
+.selected-part {
+    position: absolute; /* 캐릭터 이미지 위에 겹치도록 설정 */
+    top: 0vw;  /* 이제 character-container를 기준으로 상단에 위치 */
+    left: 0;
+    width: 100%;  /* 캐릭터와 크기 맞추기 */
+    height: auto;
+    z-index: 2;  /* 캐릭터보다 위에 보이게 설정 */
+}
+
+/* 배경 선택 버튼 스타일 */
+.background-selection {
+    display: flex;
+    justify-content: center; /* 버튼들을 가로로 정렬 */
+    gap: 20px; /* 버튼들 사이 간격 */
+    margin-top: 20px; /* 캐릭터 이미지와 버튼 사이의 간격 */
+}
+
+.background-button {
+    width: 100px; /* 버튼 크기 설정 */
+    height: auto;
+    cursor: pointer; /* 클릭 가능한 모양으로 커서 변경 */
+    transition: transform 0.3s ease; /* 버튼 호버 시 애니메이션 */
+}
+
+.background-button:hover {
+    transform: scale(1.1); /* 버튼 크기 확대 */
+}
+
+.action-buttons {
+    position: fixed;
+    top: 23vw; /* 화면 세로 중앙 기준 */
+    right: 15vw; /* 화면 오른쪽 여백 */
+    transform: translateY(-50%); /* 세로 중앙 보정 */
+    display: flex;
+    flex-direction: column; /* 위아래로 나열 */
+    gap: 30px; /* 버튼 간 간격 */
+}
+
+.action-button {
+    width: 50px; /* 버튼 너비 */
+    height: 50px; /* 버튼 높이 */
+    cursor: pointer; /* 클릭 가능 표시 */
+}

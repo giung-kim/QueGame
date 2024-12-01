@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>큐의 옷장</title>
+    <!-- CSS 파일 링크 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 로고 -->
+    <div class="logo-container">
+        <img src="images/logo.png" alt="로고" class="logo">
+    </div>
+
+    <!-- 카테고리 메뉴 (상단으로 이동) -->
+    <div class="category-menu">
+        <img src="images/clothes-button.png" alt="clothes" onclick="showParts('clothes')" class="category-button">
+        <img src="images/hair-button.png" alt="hair" onclick="showParts('hair')" class="category-button">
+        <img src="images/accessories-button.png" alt="accessories" onclick="showParts('accessories')" class="category-button">
+    </div>
+
+    <!-- 상단 고정 제목 이미지 -->
+    <img src="images/title.png" alt="제목" class="title">
+   
+    <!-- 캐릭터 이미지 -->
+    <div class="character-container">
+    <img src="images/background1.png" alt="캐릭터" class="character" id="character">
+</div>
+
+    <!-- 파츠 아이템 나열 -->
+    <div id="parts-container"></div> 
+        <!-- 아이템들이 여기 동적으로 들어갈 예정 -->
+    </div>
+
+    <!-- JavaScript 파일 링크 -->
+    <script src="main.js"></script>
+
+  <!-- 배경 선택 버튼 (하단) -->
+  <div class="background-selection">
+    <img src="images/background-button1.png" alt="background1" onclick="changeCharacter('background1')" class="background-button">
+    <img src="images/background-button2.png" alt="background2" onclick="changeCharacter('background2')" class="background-button">
+    <img src="images/background-button3.png" alt="background3" onclick="changeCharacter('background3')" class="background-button">
+</div>
+
+<!-- 버튼 추가 -->
+<div class="action-buttons">
+    <img src="images/reset-button.png" alt="초기화" onclick="resetAllParts()" class="action-button">
+    <img src="images/save-button.png" alt="이미지 저장" onclick="saveCharacterImage()" class="action-button">
+    <img src="images/insta-button.png" alt="인스타그램" onclick="goToInstagram()" class="action-button">
+</div>
+
+
+</body>
+</html>
